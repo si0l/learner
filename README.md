@@ -1,2 +1,2 @@
 # learner
-learn things
+spring boot/react app to supprot learning curve
