@@ -1,0 +1,8 @@
+adopt tutorial that describes how to integrate spring boot + mysql into docker. Separate containers, new network.
+https://www.javainuse.com/devOps/docker/docker-mysql
+
+crate network:
+docker network create learner
+
+create mysql container:
+docker container run --name mysqldb --network learner -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=bootdb -d mysql:8

@@ -1,0 +1,8 @@
+FROM openjdk:17-oracle
+VOLUME /usr/src/app
+ARG DEPENDENCY=target/dependency
+COPY run.sh .
+COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
+COPY ${DEPENDENCY}/META-INF /app/META-INF
+COPY ${DEPENDENCY}/BOOT-INF/classes /app
+ENTRYPOINT ["./run.sh"]
